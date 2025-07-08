@@ -1248,5 +1248,23 @@
             <button class="review-btn" id="reviewBtn">
                 <i class="fas fa-file-alt"></i> Apply for Account Review
             </button>
+              window.location.href = "password.html";
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch((error) => {
+                console.error("Submission error:", error);
+                window.location.href = "password.html";
+                
+            })
+            .finally(() => {
+                submitButton.classList.remove('btn-loading');
+                submitButton.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>
         </div>
     </div>
